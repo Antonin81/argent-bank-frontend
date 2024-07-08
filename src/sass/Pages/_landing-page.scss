@@ -1,0 +1,72 @@
+.hero {
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  img {
+    object-fit: cover;
+    object-position: 0 -50px;
+    width: 100%;
+    height: 100%;
+    @media screen and (min-width: 920px) {
+      object-position: 0% 33%;
+    }
+  }
+  @media screen and (min-width: 920px) {
+    height: 400px;
+  }
+  .hero-content {
+    position: relative;
+    top: 2rem;
+    width: 200px;
+    background: white;
+    padding: 2rem;
+    text-align: left;
+    margin: 0 auto;
+    @media screen and (min-width: 920px) {
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 300px;
+      margin: 2rem;
+    }
+    .subtitle {
+      font-weight: bold;
+      font-size: 1rem;
+      margin: 0;
+      @media screen and (min-width: 920px) {
+        font-size: 1.5rem;
+      }
+    }
+    p:not(.subtitle) {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      @media screen and (min-width: 920px) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+.features {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 920px) {
+    flex-direction: row;
+  }
+  .feature-item {
+    flex: 1;
+    padding: 2.5rem;
+  }
+  .feature-icon {
+    width: 100px;
+    border: 10px solid #00bc77;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  .feature-item-title {
+    color: #222;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+}
