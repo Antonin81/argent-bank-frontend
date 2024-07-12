@@ -1,7 +1,7 @@
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { loginSlice } from "../../../features/login/loginSlice";
-import { login } from "../../../common/utils/helpers/login";
-import { getUserProfile } from "../../../common/utils/helpers/getUserProfile";
+import { login } from "../../../common/utils/apiCalls/login";
+import { getUserProfile } from "../../../common/utils/apiCalls/getUserProfile";
 import { profileSlice } from "../../../features/profile/profileSlice";
 import { Navigate, useNavigate } from "react-router-dom";
 

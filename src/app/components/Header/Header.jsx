@@ -4,8 +4,6 @@ import { useSelector } from "react-redux";
 
 function Header() {
   const currentUser = useSelector((state) => state.currentUser);
-  const state = useSelector((state) => state);
-  console.log(currentUser, state);
   return (
     <header>
       <nav>

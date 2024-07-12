@@ -10,12 +10,8 @@ export const login = async (username, password) => {
                 password: password,
             }),
         });
-        const token = response.json().then(
-            (body) => {
-                return body.body.token;
-            }
-        );
-        return token;
+        const { body } = await response.json();
+        return body.token;
     } catch (error) {
         throw error;
     }

@@ -1,15 +1,22 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const profileSlice = createSlice({
-    name: "currentUser",
-    initialState: {},
+    name: "profileSlice",
+    initialState: {
+        id: null,
+        firstname: null,
+        lastname: null,
+    },
     reducers: {
         storeUserProfile: (currentState, action) => {
-            const currentUser = { id: action.payload.id, firstname: action.payload.firstname, lastname: action.payload.lastname };
-            return currentUser;
+            currentState.id = action.payload.id;
+            currentState.firstname = action.payload.firstname;
+            currentState.lastname = action.payload.lastname;
         },
         deleteUserProfile: (currentState, action) => {
-            return {};
+            currentState.id = null;
+            currentState.firstname = null;
+            currentState.lastname = null;
         }
     }
 })

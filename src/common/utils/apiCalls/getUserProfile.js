@@ -7,12 +7,8 @@ export const getUserProfile = async (token) => {
                 "Authorization": `Bearer ${token}`
             },
         });
-        const profile = response.json().then(
-            (body) => {
-                return { id: body.body.id, firstname: body.body.firstName, lastname: body.body.lastName };
-            }
-        );
-        return profile;
+        const { body } = await response.json();
+        return { id: body.id, firstname: body.firstName, lastname: body.lastName };
     } catch (error) {
         throw error;
     }
