@@ -1,6 +1,9 @@
 import Account from "../../components/Account/Account";
+import { useSelector } from "react-redux";
 
 function ProfilePage() {
+  const currentUser = useSelector((state) => state.currentUser);
+
   const accounts = [
     {
       title: "Argent Bank Checking (x8349)",
@@ -25,7 +28,7 @@ function ProfilePage() {
         <h1>
           Welcome back
           <br />
-          Tony Jarvis!
+          {currentUser.firstname} {currentUser.lastname}!
         </h1>
         <button className="edit-button">Edit Name</button>
       </div>
