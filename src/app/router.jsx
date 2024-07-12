@@ -1,14 +1,17 @@
 import React from "react";
-import LandingPage from "../common/pages/LandingPage/LandingPage";
+import LandingPage from "./pages/LandingPage/LandingPage";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Layout from "../common/components/Layout/Layout";
-import LoginPage from "../common/pages/LoginPage/LoginPage";
-import ProfilePage from "../common/pages/ProfilePage/ProfilePage";
+import Layout from "./components/Layout/Layout";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import { Provider } from "react-redux";
+import { store } from "./store";
+import Logout from "./components/Logout/logout";
 
 function AppRouter() {
   return (
-    <>
-      <React.StrictMode>
+    <React.StrictMode>
+      <Provider store={store}>
         <Router>
           <Routes>
             <Route
@@ -38,10 +41,11 @@ function AppRouter() {
                 </Layout>
               }
             />
+            <Route exact path="/logout" element={<Logout />} />
           </Routes>
         </Router>
-      </React.StrictMode>
-    </>
+      </Provider>
+    </React.StrictMode>
   );
 }
 
