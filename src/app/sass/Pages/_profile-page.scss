@@ -63,3 +63,22 @@
     }
   }
 }
+
+.update-name-form {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.update-name-form-buttons {
+  button {
+    width: 100px;
+  }
+}
+
+.update-name-form-inputs {
+  input {
+    padding: 10px;
+  }
+  margin-bottom: 20px;
+}

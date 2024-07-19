@@ -1,16 +1,20 @@
 import { apiUrl } from "./apiUrl";
 
-export const getUserProfile = async (token) => {
+export const putUserProfile = async (token, firstname, lastname) => {
     try {
         const response = await fetch(apiUrl + "/profile", {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": `Bearer ${token}`
             },
+            body: JSON.stringify({
+                firstName: firstname,
+                lastName: lastname,
+            }),
         });
         const { body } = await response.json();
-        return { id: body.id, firstname: body.firstName, lastname: body.lastName };
+        return body;
     } catch (error) {
         throw error;
     }

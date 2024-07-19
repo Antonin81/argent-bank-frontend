@@ -6,7 +6,6 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import Logout from "./components/Logout/logout";
 
 function AppRouter() {
   return (
@@ -41,7 +40,6 @@ function AppRouter() {
                 </Layout>
               }
             />
-            <Route exact path="/logout" element={<Logout />} />
           </Routes>
         </Router>
       </Provider>

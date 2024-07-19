@@ -1,6 +1,8 @@
+import { apiUrl } from "./apiUrl";
+
 export const login = async (username, password) => {
     try {
-        const response = await fetch("http://localhost:3001/api/v1/user/login", {
+        const response = await fetch(apiUrl + "/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

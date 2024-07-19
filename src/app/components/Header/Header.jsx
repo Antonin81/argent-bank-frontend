@@ -1,9 +1,21 @@
 import argentBankLogo from "../../../assets/argentBankLogo.png";
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { loginSlice } from "../../../features/login/loginSlice";
+import { profileSlice } from "../../../features/profile/profileSlice";
 
 function Header() {
-  const currentUser = useSelector((state) => state.currentUser);
+  const { id, firstname, lastname } = useSelector((state) => state.currentUser);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  function logout(e) {
+    e.preventDefault();
+    dispatch(loginSlice.actions.logUserOut());
+    dispatch(profileSlice.actions.deleteUserProfile());
+    navigate("/", { replace: true });
+  }
+
   return (
     <header>
       <nav>
@@ -11,14 +23,14 @@ function Header() {
           <img src={argentBankLogo} alt="" />
           <h1 className="sr-only">Argent Bank</h1>
         </Link>
-        {currentUser.id ? (
+        {id ? (
           <div>
             <Link to="/profile" className="main-nav-item">
-              <i className="fa fa-user-circle"></i> {currentUser.firstname}
+              <i className="fa fa-user-circle"></i> {firstname}
             </Link>
-            <Link to="/logout" className="main-nav-item">
+            <a href="#" onClick={logout} className="main-nav-item">
               <i className="fa fa-sign-out"></i> Sign Out
-            </Link>
+            </a>
           </div>
         ) : (
           <Link to="/login" className="main-nav-item">

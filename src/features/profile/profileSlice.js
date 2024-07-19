@@ -17,6 +17,10 @@ export const profileSlice = createSlice({
             currentState.id = null;
             currentState.firstname = null;
             currentState.lastname = null;
+        },
+        editUser: (currentState, action) => {
+            currentState.firstname = action.payload.firstname;
+            currentState.lastname = action.payload.lastname;
         }
     }
 })
