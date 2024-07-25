@@ -1,8 +1,6 @@
-import { apiUrl } from "./apiUrl";
-
 export const putUserProfile = async (token, firstname, lastname) => {
     try {
-        const response = await fetch(apiUrl + "/profile", {
+        const response = await fetch(import.meta.env.VITE_API_URL + "/profile", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

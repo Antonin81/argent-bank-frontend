@@ -5,7 +5,7 @@ import iconSecurity from "../../../assets/icon-security.png";
 import FeatureItem from "../../components/FeatureItem/FeatureItem";
 
 function LandingPage() {
-  const features = [
+  const FEATURES = [
     {
       img: iconChat,
       alt: "Chat icon",
@@ -40,7 +40,7 @@ function LandingPage() {
       </div>
       <section className="features">
         <h2 className="sr-only">Features</h2>
-        {features.map((feature) => (
+        {FEATURES.map((feature) => (
           <FeatureItem data={feature} key={feature.title} />
         ))}
       </section>
