@@ -20,7 +20,7 @@ function LoginPage() {
       dispatch(profileSlice.actions.storeUserProfile(userProfile));
       navigate("/profile", { replace: true });
     } catch (error) {
-      console.log("Nan zzzai pa");
+      console.log("Ce compte n'existe pas");
     }
   };
 
