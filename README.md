@@ -30,7 +30,7 @@ The objective of this project consists in creating some interfaces for their ban
     <img alt="argentBankLogo" src="https://github.com/user-attachments/assets/e6c412ce-8e5f-478b-a0d4-43daea1afec3">
 </p>
 
-### Profile page with name change![Uploading Profile.png…]()
+### Profile page with name change
 
 <p align="center">
     <img alt="argentBankLogo" src="https://github.com/user-attachments/assets/2ec39eaf-56e9-4dea-9199-f4a841469a08">
