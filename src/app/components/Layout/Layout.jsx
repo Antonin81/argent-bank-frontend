@@ -19,7 +19,7 @@ function Layout({ children }) {
           dispatch(loginSlice.actions.logUserIn(localStorage.getItem("token")));
           dispatch(profileSlice.actions.storeUserProfile(userProfile));
         } catch (error) {
-          // console.error("token en localstorage invalide", error);
+          console.error("token en localstorage invalide ", error);
         }
       }
     }
