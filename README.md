@@ -2,7 +2,9 @@
 
 ## What is ArgentBank ?
 
-<img width="228" alt="argentBankLogo" src="https://github.com/user-attachments/assets/d49a7252-c86c-4f11-9255-794f9cf18e8a">
+<p align="center">
+    <img width="228" alt="argentBankLogo" src="https://github.com/user-attachments/assets/d49a7252-c86c-4f11-9255-794f9cf18e8a">
+</p>
 
 ArgentBank is a fictive online bank created for the "Développeur d'applications - Javascript React" (Javascript React applications developer) studies from OpenClassrooms.
 
@@ -12,19 +14,27 @@ The objective of this project consists in creating some interfaces for their ban
 
 ### Homepage
 
-![Homepage](https://github.com/user-attachments/assets/9ffc0643-824e-4a1e-8d60-27bd9ddf618c)
+<p align="center">
+    ![Homepage](https://github.com/user-attachments/assets/9ffc0643-824e-4a1e-8d60-27bd9ddf618c)
+</p>
 
 ### Login page
 
-![Login](https://github.com/user-attachments/assets/ea754c8c-e3f5-4c01-996c-ff6a5fef45aa)
+<p align="center">
+    ![Login](https://github.com/user-attachments/assets/ea754c8c-e3f5-4c01-996c-ff6a5fef45aa)
+</p>
 
 ### Profile page
 
-![Profile](https://github.com/user-attachments/assets/e6c412ce-8e5f-478b-a0d4-43daea1afec3)
+<p align="center">
+    ![Profile](https://github.com/user-attachments/assets/e6c412ce-8e5f-478b-a0d4-43daea1afec3)
+</p>
 
 ### Profile page with name change![Uploading Profile.png…]()
 
-![Profile_with_name_change](https://github.com/user-attachments/assets/2ec39eaf-56e9-4dea-9199-f4a841469a08)
+<p align="center">
+    ![Profile_with_name_change](https://github.com/user-attachments/assets/2ec39eaf-56e9-4dea-9199-f4a841469a08)
+</p>
 
 ## How to work on it ?
 
